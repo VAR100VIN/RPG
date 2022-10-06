@@ -29,6 +29,9 @@ class Type
     #[ORM\Column]
     private ?int $intelligence_defaut = null;
 
+    #[ORM\Column]
+    private ?int $portee_defaut = null; 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Type
     public function setIntelligenceDefaut(int $intelligence_defaut): self
     {
         $this->intelligence_defaut = $intelligence_defaut;
+
+        return $this;
+    }
+
+    public function getPorteeDefaut(): ?int
+    {
+        return $this->endurance_defaut;
+    }
+
+    public function setPorteeDefaut(int $portee_defaut): self
+    {
+        $this->portee_defaut = $portee_defaut;
 
         return $this;
     }
